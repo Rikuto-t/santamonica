@@ -6,12 +6,12 @@ require 'csv'
 
 require "fileutils"
 
-FileUtils.rm("./list.csv")
+FileUtils.rm("./list.csv") if File.exist?("list.csv")
 
 driver = Selenium::WebDriver.for :chrome # ブラウザ起動
 
 driver.navigate.to $url[0] # URLを開く
-sleep 10
+sleep 5
 
 while driver.find_elements(:link, '次へ>>').length > 0
   # 商品ブロックを取得
@@ -33,12 +33,12 @@ while driver.find_elements(:link, '次へ>>').length > 0
            item_options.select_by(:index, i) # プルダウンを選択
            puts "在庫数：" + detailrightbloc.find_element(:id, 'stock_dynamic').text # 在庫数を取得
            puts detailrightbloc.find_element(:id, 'product_code_dynamic').text
-           csv << [detailrightbloc.find_element(:id, 'product_code_dynamic').text, stock_default]
+           csv << [detailrightbloc.find_element(:id, 'product_code_dynamic').text, stock_dynamic]
          end
       else # 属性なしの時の処理
         puts "在庫数：" + stock_default
         puts detailrightbloc.find_element(:id, 'product_code_default').text
-        csv << [detailrightbloc.find_element(:id, 'product_code_default').text, detailrightbloc.find_element(:id, 'stock_dynamic').text]
+        csv << [detailrightbloc.find_element(:id, 'product_code_default').text, stock_default]
       end
     end
     driver.navigate.back
