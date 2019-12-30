@@ -33,7 +33,7 @@ while driver.find_elements(:link, '次へ>>').length > 0
            item_options.select_by(:index, i) # プルダウンを選択
            puts "在庫数：" + detailrightbloc.find_element(:id, 'stock_dynamic').text # 在庫数を取得
            puts detailrightbloc.find_element(:id, 'product_code_dynamic').text
-           csv << [detailrightbloc.find_element(:id, 'product_code_dynamic').text, stock_dynamic]
+           csv << [detailrightbloc.find_element(:id, 'product_code_dynamic').text, detailrightbloc.find_element(:id, 'stock_dynamic').text]
          end
       else # 属性なしの時の処理
         puts "在庫数：" + stock_default
