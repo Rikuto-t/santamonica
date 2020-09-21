@@ -1,0 +1,5 @@
+current directory: /Users/rikuto/santamonica/vendor/bundle/ruby/2.5.0/gems/ruby-debug-ide-0.7.2/ext
+/Users/rikuto/.rbenv/versions/2.5.1-santamonica/bin/ruby mkrf_conf.rb
+
+current directory: /Users/rikuto/santamonica/vendor/bundle/ruby/2.5.0/gems/ruby-debug-ide-0.7.2/ext
+/Users/rikuto/.rbenv/versions/2.5.1-santamonica/bin/ruby -rrubygems /Users/rikuto/santamonica/vendor/bundle/ruby/2.5.0/gems/rake-13.0.1/exe/rake RUBYARCHDIR=/Users/rikuto/santamonica/vendor/bundle/ruby/2.5.0/extensions/x86_64-darwin-17/2.5.0-static/ruby-debug-ide-0.7.2 RUBYLIBDIR=/Users/rikuto/santamonica/vendor/bundle/ruby/2.5.0/extensions/x86_64-darwin-17/2.5.0-static/ruby-debug-ide-0.7.2

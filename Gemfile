@@ -7,3 +7,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 gem "selenium-webdriver"
 gem "nokogiri"
+gem "debase"
+gem "ruby-debug-ide"
