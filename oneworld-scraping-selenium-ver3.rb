@@ -70,7 +70,8 @@ begin
                if sold_status.include? "品切"
                 stock = 0
                else
-                stock = 1
+                product_stock = product_detail.find_element(:class, 'product-stock').text
+                stock = product_stock
                end
               # puts "在庫数：" + product_detail.find_element(:id, 'stock_dynamic').text # 在庫数を取得
               # puts product_detail.find_element(:id, 'product_code_dynamic').text
